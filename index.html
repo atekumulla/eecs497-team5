@@ -5,19 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Social Skills Learning App</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles specific to this page */
+        body {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            height: 100vh; /* Set the body height to 100% of the viewport height */
+            position: relative;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Center align the buttons */
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .tabs a {
+            padding: 10px 20px;
+            background-color: #4d94ff; /* Light gray background color */
+            color: #000; /* Black text color */
+            text-decoration: none;
+            border: 2px solid #007bff; /* Add a border to the buttons */
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+
+        .tabs a:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-large {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            background-color: #4d94ff; /* Lighter blue background color */
+            color: #000; /* Black text color */
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #007bff; /* Add a border to the buttons */
+            border-radius: 10px;
+            margin: 20px;
+            cursor: pointer;
+            line-height: 300px;
+            font-size: 24px;
+        }
+
+        /* Positioning for sign-out button */
+        .sign-out {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
 
 <div id="home-page" class="page">
-    <h1>Welcome to the Social Skills Learning App</h1>
-    <p>This app is designed to help teens with autism learn social skills in a fun and engaging way.</p>
-    <p>Here are some features:</p>
-    
-    <ul>
-        <li>Interactive games</li>
-        <li>FAQ section</li>
-        <li>Progress tracking</li>
-    </ul>
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+        <a href="login.html">Login</a>
+        <a href="faq.html">FAQ</a>
+        <a href="link_game.html">Games</a>
+        <p class="sign-out"><a href="login.html">Sign Out</a></p>
+    </div>
+
+    <div class="container">
+        <!-- Welcome Message -->
+        <h1>Welcome to CONNECTing To Me!</h1>
+
+        <!-- Buttons for Games -->
+        <a href="link_game.html" class="btn-large">Connections</a>
+        <a href="link_game.html" class="btn-large">Game 2</a> 
+        <a href="link_game.html" class="btn-large">Game 3</a>
+    </div>
 </div>
 
 </body>
