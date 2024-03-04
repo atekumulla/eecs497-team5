@@ -9,14 +9,14 @@ let pairlist = [];
 let pairIDlist = [];
 
 
-let series1 = ['Chuckle', 'Laughter', 'Giggle', 'Cackle'];
-let series2 = ['Fidget', 'Tap', 'Excessive talking', 'Yawn innapropriately'];
-let series3 = ['Listening', 'Eye Contact', 'Ask follow up Qs', 'Patience'];
-let series4 = ['Looks like a good time!', 'Nice photo!', 'Love your smile!', '[No comment]'];
-let series1topic = ['Forms of Laughter']
-let series2topic = ['Sign of nervousness']
-let series3topic = ['Good listening skills']
-let series4topic = ['Appropriate instagram comments']
+let series1 = ['Expressing feelings calmly, I am disappointed because...', 'Seeking comfort', 'Taking deep breaths to manage emotions', 'Keeping a calm posture to show acceptance'];
+let series2 = ['Saying: I understand how you feel...', 'Offering support, If you need anything, I am here', 'Maintaining eye contact to show you are listening', 'Gentle nods to show understanding and empathy'];
+let series3 = ['Saying "Thank you for the feedback.', 'Asking clarifying questions to understand better', 'Maintaining a neutral expression to show openness', 'Nodding to show you are listening and taking it seriously'];
+let series4 = ['Using enthusiastic tone', 'Sharing your feelings: This makes me really happy!', 'Clapping hands or jumping slightly to show excitement', 'Smiling broadly or laughing'];
+let series1topic = ['Dealing with Disappointment']
+let series2topic = ['Showing Empathy']
+let series3topic = ['Accepting Criticism']
+let series4topic = ['Expressing Excitement']
 let series1buttons = [];
 let series2buttons = [];
 let series3buttons = [];
