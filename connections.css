@@ -1,0 +1,168 @@
+.fullgrid {
+  display: grid;
+  grid-template-rows: repeat(4, 60px);
+  row-gap: 20px;
+  justify-items: center;
+}
+
+.rowgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  column-gap: 20px;
+  justify-items: center;
+}
+
+.button {
+  width: 120px;
+  height: 60px;
+  background-color: rgb(210, 210, 210);
+  transition: background-color 0.3s, transform 0.3s;
+
+}
+
+.button:hover {
+  background-color: rgb(185, 184, 184);
+  transform: translateY(2px);
+}
+
+.pressed {
+  background-color: rgb(126, 126, 126);
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.pressed:hover {
+  background-color: rgb(126, 126, 126);
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Adjust the jump height as needed */
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.win1 {
+  background-color: rgb(223, 43, 226);
+  animation: correctAnswer 0.5s ease-in-out;
+}
+
+.win1:hover {
+  border-style: none;
+  background-color: rgb(223, 43, 226);
+}
+
+.win2 {
+  background-color: rgb(226, 223, 43);
+  animation: correctAnswer 0.5s ease-in-out;
+}
+
+.win2:hover {
+  background-color: rgb(226, 223, 43);
+}
+
+.win3 {
+  background-color: rgb(23, 179, 39);
+  animation: correctAnswer 0.5s ease-in-out;
+}
+
+.win3:hover {
+  background-color: rgb(23, 179, 39);
+}
+
+.win4 {
+  background-color: rgb(62, 75, 219);
+  animation: correctAnswer 0.5s ease-in-out;
+}
+
+.win4:hover {
+  background-color: rgb(62, 75, 219);
+}
+
+.lives {
+  display: grid;
+  grid-template-columns: 50px 20px 20px 20px 20px;
+  column-gap: 10px;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+svg {
+  margin-top: 15px;
+}
+
+@keyframes AnimateAll {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  99% {
+    transform: translateY(calc(80px * var(--y))) translateX(calc(140px * var(--x)));
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.rectangle {
+  display: flex;
+  width: 540px;
+  height: 60px;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+  margin-left: 420px;
+}
+
+.title .text {
+  display: block;
+}
+
+.title {
+  font-size: 20px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-weight: bold;
+  font-family: 'NYT-Franklin';
+  z-index: 1;
+}
+
+.text {
+  font-size: 16px;
+  font-family: 'NYT-Franklin';
+  margin-top: 10px;
+  margin-bottom: 5px;
+  z-index: 1;
+}
+
+#rectangle1 {
+  background-color: rgb(223, 43, 226);
+}
+
+#rectangle2 {
+  background-color: rgb(226, 223, 43);
+}
+
+#rectangle3 {
+  background-color: rgb(23, 179, 39);
+}
+
+#rectangle4 {
+  background-color: rgb(62, 75, 219);
+}
