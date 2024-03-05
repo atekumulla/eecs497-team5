@@ -13,11 +13,18 @@
 }
 
 .button {
-  width: 120px;
-  height: 60px;
+  width: 180px; /* Adjust the width of the buttons */
+  height: 100px; /* Adjust the height of the buttons */
   background-color: rgb(210, 210, 210);
   transition: background-color 0.3s, transform 0.3s;
-
+  padding: 0; /* Remove padding */
+  box-sizing: border-box; /* Include padding in the width and height */
+  overflow-wrap: break-word; /* Allow text to wrap within the button */
+  font-size: 12px; /* Reduce the font size to fit all the text */
+  margin: 5px; /* Add margin to create a gap between buttons */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .button:hover {
@@ -97,7 +104,7 @@
   column-gap: 10px;
   justify-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 60px; /* Increase the margin-top value to move it further down */
 }
 
 svg {
@@ -110,7 +117,8 @@ svg {
   }
 
   99% {
-    transform: translateY(calc(80px * var(--y))) translateX(calc(140px * var(--x)));
+    transform: translateY(calc(80px * var(--y)))
+      translateX(calc(140px * var(--x)));
   }
 
   100% {
@@ -139,13 +147,13 @@ svg {
   margin-top: 7px;
   margin-bottom: 7px;
   font-weight: bold;
-  font-family: 'NYT-Franklin';
+  font-family: "NYT-Franklin";
   z-index: 1;
 }
 
 .text {
   font-size: 16px;
-  font-family: 'NYT-Franklin';
+  font-family: "NYT-Franklin";
   margin-top: 10px;
   margin-bottom: 5px;
   z-index: 1;
