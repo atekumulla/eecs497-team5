@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "NYT-Franklin";
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    /* Set text color to white */
+    background: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+}
