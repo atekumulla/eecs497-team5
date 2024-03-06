@@ -4,36 +4,30 @@ body {
 
 .fullgrid {
   display: grid;
-  grid-template-rows: repeat(4, 80px);
-  row-gap: 40px;
+  grid-template-rows: repeat(4, 60px);
+  row-gap: 20px;
   justify-items: center;
 }
 
 .rowgrid {
   display: grid;
-  grid-template-columns: repeat(4, 80px);
-  column-gap: 150px;
+  grid-template-columns: repeat(4, 120px);
+  column-gap: 20px;
   justify-items: center;
 }
 
 .button {
-  width: 210px;
-  height: 100px;
+  width: 120px;
+  height: 60px;
   background-color: rgb(239, 237, 237);
   transition: background-color 0.3s, transform 0.3s;
-  padding: 2;
-  overflow-wrap: normal;
-  font-size: 14px;
-  margin: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: Arial;
   font-weight: bold;
   color: black;
   border-radius: 10px;
   border-style: solid;
   border-color: rgb(239, 237, 237);
+
 }
 
 .button:hover {
@@ -44,8 +38,7 @@ body {
 .pressed {
   background-color: rgb(55, 55, 55);
   color: white;
-  font-weight: bold;
-  border-color: rgb(55, 55, 55);
+  border-color: black;
   border-width: 3px;
   border-style: solid;
 }
@@ -115,8 +108,7 @@ body {
   column-gap: 10px;
   justify-items: center;
   justify-content: center;
-  margin-top: 60px;
-  /* Increase the margin-top value to move it further down */
+  margin-top: 20px;
 }
 
 svg {
@@ -158,13 +150,13 @@ svg {
   margin-top: 7px;
   margin-bottom: 7px;
   font-weight: bold;
-  font-family: "NYT-Franklin";
+  font-family: 'NYT-Franklin';
   z-index: 1;
 }
 
 .text {
   font-size: 16px;
-  font-family: "NYT-Franklin";
+  font-family: 'NYT-Franklin';
   margin-top: 10px;
   margin-bottom: 5px;
   z-index: 1;
