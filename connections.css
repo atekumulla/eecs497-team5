@@ -3,22 +3,23 @@ body {
 }
 
 .fullgrid {
+  padding-top: 5%;
   display: grid;
-  grid-template-rows: repeat(4, 60px);
+  grid-template-rows: repeat(4, 90px);
   row-gap: 20px;
   justify-items: center;
 }
 
 .rowgrid {
   display: grid;
-  grid-template-columns: repeat(4, 120px);
+  grid-template-columns: repeat(4, 130px);
   column-gap: 20px;
   justify-items: center;
 }
 
 .button {
-  width: 120px;
-  height: 60px;
+  width: 130px;
+  height: 90px;
   background-color: rgb(239, 237, 237);
   transition: background-color 0.3s, transform 0.3s;
   font-family: Arial;
