@@ -4,45 +4,36 @@ body {
 
 .fullgrid {
   display: grid;
-  /* grid-template-rows: repeat(4, 60px); */
-  grid-template-rows: repeat(4, 70px);
+  grid-template-rows: repeat(4, 80px);
   row-gap: 40px;
   justify-items: center;
 }
 
 .rowgrid {
   display: grid;
-  /* grid-template-columns: repeat(4, 120px); */
-  grid-template-columns: repeat(4, 110px);
-  /* column-gap: 20px; */
+  grid-template-columns: repeat(4, 80px);
   column-gap: 150px;
   justify-items: center;
 }
 
 .button {
-  /* width: 180px; */
-  width: 250px;
-  /* Adjust the width of the buttons */
+  width: 210px;
   height: 100px;
-  /* Adjust the height of the buttons */
-  background-color: rgb(210, 210, 210);
+  background-color: rgb(239, 237, 237);
   transition: background-color 0.3s, transform 0.3s;
-  padding: 0;
-  /* Remove padding */
-  box-sizing: border-box;
-  /* Include padding in the width and height */
-  overflow-wrap: break-word;
-  /* Allow text to wrap within the button */
+  padding: 2;
+  overflow-wrap: normal;
   font-size: 14px;
-  /* Reduce the font size to fit all the text */
   margin: 2px;
-  /* Add margin to create a gap between buttons */
   display: flex;
-  /* Use flexbox for centering */
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
-  /* Center vertically */
+  font-family: Arial;
+  font-weight: bold;
+  color: black;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(239, 237, 237);
 }
 
 .button:hover {
@@ -51,8 +42,10 @@ body {
 }
 
 .pressed {
-  background-color: rgb(126, 126, 126);
-  border-color: black;
+  background-color: rgb(55, 55, 55);
+  color: white;
+  font-weight: bold;
+  border-color: rgb(55, 55, 55);
   border-width: 3px;
   border-style: solid;
 }
