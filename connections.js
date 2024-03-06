@@ -9,14 +9,14 @@ let pairlist = [];
 let pairIDlist = [];
 
 
-let series1 = ['Chuckle', 'Laughter', 'Giggle', 'Cackle'];
-let series2 = ['Fidget', 'Tap', 'Excessive talking', 'Yawn innapropriately'];
-let series3 = ['Listening', 'Eye Contact', 'Ask follow up Qs', 'Patience'];
-let series4 = ['Looks like a good time!', 'Nice photo!', 'Love your smile!', '[No comment]'];
-let series1topic = ['Forms of Laughter']
+let series1 = ['Acceptance', 'Reflection', 'Resilience', 'Growth Mindset'];
+let series2 = ['Fidget', 'Pacing', 'Rapid Speech', 'Avoiding Eye Contact '];
+let series3 = ['Think Before Posting', 'Respectful Compliments', 'Positive Engagement', 'Authenticity'];
+let series4 = ['Active Listening', 'Kind Words', 'Non-Judgemental', 'Validating Feelings'];
+let series1topic = ['Dealing with disappointment']
 let series2topic = ['Sign of nervousness']
-let series3topic = ['Good listening skills']
-let series4topic = ['Appropriate instagram comments']
+let series3topic = ['Social media etiquette']
+let series4topic = ['Showing empathy']
 let series1buttons = [];
 let series2buttons = [];
 let series3buttons = [];
