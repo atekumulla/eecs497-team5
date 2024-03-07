@@ -410,17 +410,20 @@ let lives = 4;
 function takelife() {
   if (lives == 4) {
     const element = document.getElementById("life4");
-    showAlert("Wrong combination. Guess again");
+    // showAlert("Wrong combination. Guess again");
+    showAlert("Wrong combination. Guess again", 'warning');
     element.remove();
     lives--;
   } else if (lives == 3) {
     const element = document.getElementById("life3");
-    showAlert("Wrong combination. Guess again");
+    // showAlert("Wrong combination. Guess again");
+    showAlert("Wrong combination. Guess again", 'warning');
     element.remove();
     lives--;
   } else if (lives == 2) {
     const element = document.getElementById("life2");
-    showAlert("Wrong combination. Guess again");
+    // showAlert("Wrong combination. Guess again");
+    showAlert("Wrong combination. Guess again", 'warning');
     element.remove();
     lives--;
   } else if (lives == 1) {
@@ -428,7 +431,8 @@ function takelife() {
     element.remove();
     lives--;
     setTimeout(() => {
-      alert("Sorry, you lost. Better luck next time!");
+      // showAlert("Sorry, you lost. Better luck next time!");
+      showAlert("Sorry, you lost. Better luck next time!", 'gameOver');
       solverest();
     }, 1000); // 2000 milliseconds = 2 seconds
   }
@@ -438,7 +442,39 @@ function takelife() {
   pressed.splice(0, 4);
 }
 
-function showAlert(message) {
+// function showAlert(message) {
+//   // Create popup container
+//   const popupContainer = document.createElement("div");
+//   popupContainer.classList.add("popup-container");
+
+//   // Create popup content
+//   const popup = document.createElement("div");
+//   popup.classList.add("popup");
+
+//   // Create close button
+//   const closeBtn = document.createElement("span");
+//   closeBtn.classList.add("close-btn");
+//   closeBtn.textContent = "Close";
+//   closeBtn.onclick = () => {
+//     popupContainer.remove();
+//   };
+
+//   // Create message element
+//   const alertMessage = document.createElement("p");
+//   alertMessage.textContent = message;
+
+//   // Append close button and message to popup
+//   popup.appendChild(alertMessage);
+//   popup.appendChild(closeBtn);
+
+
+//   // Append popup to container
+//   popupContainer.appendChild(popup);
+
+//   // Append container to body
+//   document.body.appendChild(popupContainer);
+// }
+function showAlert(message, alertType = 'default') {
   // Create popup container
   const popupContainer = document.createElement("div");
   popupContainer.classList.add("popup-container");
@@ -447,21 +483,29 @@ function showAlert(message) {
   const popup = document.createElement("div");
   popup.classList.add("popup");
 
+  // Differentiate between alert types
+  if (alertType === 'gameOver') {
+    popup.classList.add("game-over-popup");
+  } else if (alertType === 'warning') {
+    popup.classList.add("warning-popup");
+  }
+  // ... You can add more conditions for different types
+
+  // Create message element
+  const alertMessage = document.createElement("p");
+  alertMessage.textContent = message;
+
   // Create close button
-  const closeBtn = document.createElement("span");
+  const closeBtn = document.createElement("button");
   closeBtn.classList.add("close-btn");
   closeBtn.textContent = "Close";
   closeBtn.onclick = () => {
     popupContainer.remove();
   };
 
-  // Create message element
-  const alertMessage = document.createElement("p");
-  alertMessage.textContent = message;
-
-  // Append close button and message to popup
-  popup.appendChild(closeBtn);
+  // Append message and close button to popup
   popup.appendChild(alertMessage);
+  popup.appendChild(closeBtn);
 
   // Append popup to container
   popupContainer.appendChild(popup);
