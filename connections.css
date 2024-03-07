@@ -1,5 +1,5 @@
 body {
-  background: url('images/background.png');
+  background: url("images/background.png");
 }
 
 .fullgrid {
@@ -28,7 +28,6 @@ body {
   border-radius: 10px;
   border-style: solid;
   border-color: rgb(239, 237, 237);
-
 }
 
 .button:hover {
@@ -122,7 +121,8 @@ svg {
   }
 
   99% {
-    transform: translateY(calc(80px * var(--y))) translateX(calc(140px * var(--x)));
+    transform: translateY(calc(80px * var(--y)))
+      translateX(calc(140px * var(--x)));
   }
 
   100% {
@@ -147,17 +147,17 @@ svg {
 }
 
 .title {
-  font-size: 20px;
+  font-size: 24px;
   margin-top: 7px;
   margin-bottom: 7px;
   font-weight: bold;
-  font-family: 'NYT-Franklin';
+  font-family: "NYT-Franklin";
   z-index: 1;
 }
 
 .text {
   font-size: 16px;
-  font-family: 'NYT-Franklin';
+  font-family: "NYT-Franklin";
   margin-top: 10px;
   margin-bottom: 5px;
   z-index: 1;
@@ -177,4 +177,64 @@ svg {
 
 #rectangle4 {
   background-color: rgb(62, 75, 219);
+}
+.streak-counter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #f0f0f0; /* Cloud-like background color */
+  border-radius: 20px; /* Round corners to give a cloud-like shape */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  font-family: Arial, sans-serif;
+}
+
+.streak-counter p {
+  margin: 5px 0;
+}
+
+.streak-counter span {
+  font-weight: bold;
+  color: #333; /* Text color */
+}
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Add box shadow for depth */
+}
+
+.popup button {
+  display: block;
+  margin: 0 auto;
+}
+
+.close-btn {
+  margin-top: 20px; /* Adjust spacing from message */
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #0056b3;
 }
