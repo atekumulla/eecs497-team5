@@ -1,89 +1,110 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Connections</title>
-    <link rel="stylesheet" href="connections.css" />
-  </head>
 
-  <body>
-    <div class="fullgrid">
-      <h1>Connections Game</h1>
-      <div class="rowgrid" id="row1">
-        <div id="button1adiv">
-          <button class="button" id="button1a"></button>
-        </div>
-        <div id="button2adiv">
-          <button class="button" id="button2a"></button>
-        </div>
-        <div id="button3adiv">
-          <button class="button" id="button3a"></button>
-        </div>
-        <div id="button4adiv">
-          <button class="button" id="button4a"></button>
-        </div>
-      </div>
-      <div class="rowgrid" id="row2">
-        <div id="button1bdiv">
-          <button class="button" id="button1b"></button>
-        </div>
-        <div id="button2bdiv">
-          <button class="button" id="button2b"></button>
-        </div>
-        <div id="button3bdiv">
-          <button class="button" id="button3b"></button>
-        </div>
-        <div id="button4bdiv">
-          <button class="button" id="button4b"></button>
-        </div>
-      </div>
-      <div class="rowgrid" id="row3">
-        <div id="button1cdiv">
-          <button class="button" id="button1c"></button>
-        </div>
-        <div id="button2cdiv">
-          <button class="button" id="button2c"></button>
-        </div>
-        <div id="button3cdiv">
-          <button class="button" id="button3c"></button>
-        </div>
-        <div id="button4cdiv">
-          <button class="button" id="button4c"></button>
-        </div>
-      </div>
-      <div class="rowgrid" id="row4">
-        <div id="button1ddiv">
-          <button class="button" id="button1d"></button>
-        </div>
-        <div id="button2ddiv">
-          <button class="button" id="button2d"></button>
-        </div>
-        <div id="button3ddiv">
-          <button class="button" id="button3d"></button>
-        </div>
-        <div id="button4ddiv">
-          <button class="button" id="button4d"></button>
-        </div>
+<head>
+  <title>Connections</title>
+  <link rel="stylesheet" href="connections.css" />
+</head>
+
+<body>
+
+
+  <div class="dictionary-btn-container">
+    <button id="dictionaryBtn" class="dictionary-btn">
+      <img src="images/dict.png" alt="Dictionary" />
+    </button>
+  </div>
+  <!-- The Modal -->
+  <div id="dictionaryModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="dictionaryContent">
+        <!-- Dictionary entries will be inserted here -->
       </div>
     </div>
-    <div class="streak-counter">
-      <p>Total Days Played: <span id="total-days">10</span></p>
-      <p>Consecutive Wins: <span id="consecutive-wins">8</span></p>
+  </div>
+
+
+  <div class="fullgrid">
+    <h1>Connections Game</h1>
+    <div class="rowgrid" id="row1">
+      <div id="button1adiv">
+        <button class="button" id="button1a"></button>
+      </div>
+      <div id="button2adiv">
+        <button class="button" id="button2a"></button>
+      </div>
+      <div id="button3adiv">
+        <button class="button" id="button3a"></button>
+      </div>
+      <div id="button4adiv">
+        <button class="button" id="button4a"></button>
+      </div>
     </div>
-    <div class="lives">
-      <p>Lives:</p>
-      <svg id="life1" class="life" width="20" height="20">
-        <circle cx="10" cy="10" r="10" fill="grey" />
-      </svg>
-      <svg id="life2" class="life" width="20" height="20">
-        <circle cx="10" cy="10" r="10" fill="grey" />
-      </svg>
-      <svg id="life3" class="life" width="20" height="20">
-        <circle cx="10" cy="10" r="10" fill="grey" />
-      </svg>
-      <svg id="life4" class="life" width="20" height="20">
-        <circle cx="10" cy="10" r="10" fill="grey" />
-      </svg>
+    <div class="rowgrid" id="row2">
+      <div id="button1bdiv">
+        <button class="button" id="button1b"></button>
+      </div>
+      <div id="button2bdiv">
+        <button class="button" id="button2b"></button>
+      </div>
+      <div id="button3bdiv">
+        <button class="button" id="button3b"></button>
+      </div>
+      <div id="button4bdiv">
+        <button class="button" id="button4b"></button>
+      </div>
     </div>
-    <script src="connections.js"></script>
-  </body>
+    <div class="rowgrid" id="row3">
+      <div id="button1cdiv">
+        <button class="button" id="button1c"></button>
+      </div>
+      <div id="button2cdiv">
+        <button class="button" id="button2c"></button>
+      </div>
+      <div id="button3cdiv">
+        <button class="button" id="button3c"></button>
+      </div>
+      <div id="button4cdiv">
+        <button class="button" id="button4c"></button>
+      </div>
+    </div>
+    <div class="rowgrid" id="row4">
+      <div id="button1ddiv">
+        <button class="button" id="button1d"></button>
+      </div>
+      <div id="button2ddiv">
+        <button class="button" id="button2d"></button>
+      </div>
+      <div id="button3ddiv">
+        <button class="button" id="button3d"></button>
+      </div>
+      <div id="button4ddiv">
+        <button class="button" id="button4d"></button>
+      </div>
+    </div>
+  </div>
+  <div class="streak-counter">
+    <p>Total Days Played: <span id="total-days">10</span></p>
+    <p>Consecutive Wins: <span id="consecutive-wins">8</span></p>
+  </div>
+  <div class="lives">
+    <p>Lives:</p>
+    <svg id="life1" class="life" width="20" height="20">
+      <circle cx="10" cy="10" r="10" fill="grey" />
+    </svg>
+    <svg id="life2" class="life" width="20" height="20">
+      <circle cx="10" cy="10" r="10" fill="grey" />
+    </svg>
+    <svg id="life3" class="life" width="20" height="20">
+      <circle cx="10" cy="10" r="10" fill="grey" />
+    </svg>
+    <svg id="life4" class="life" width="20" height="20">
+      <circle cx="10" cy="10" r="10" fill="grey" />
+    </svg>
+  </div>
+  <script src="connections.js"></script>
+</body>
+
 </html>
