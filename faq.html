@@ -4,18 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Social Skills Learning App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div id="faq-page" class="page">
-    <h1>Frequently Asked Questions</h1>
-    <h2>Q: What is this app about?</h2>
-    <p>This app is designed to help teens with autism learn social skills through interactive games and activities.</p>
-    <h2>Q: How can I get started?</h2>
-    <p>To get started, simply create an account and explore the different features of the app.</p>
-    <!-- Add more FAQs here -->
+    <div class="title">
+        <h1>Frequently Asked Questions</h1>
+        <a href="/" class="back-to-home">Back to Home Page</a>
+    </div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Q: What is this app about?</button>
+            <div class="faq-answer">
+                <p>This app is designed to help teens with autism learn social skills through interactive games and activities.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Q: How can I get started?</button>
+            <div class="faq-answer">
+                <p>To get started, simply create an account and explore the different features of the app.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Q: What is this app about?</button>
+            <div class="faq-answer">
+                <p>This app is designed to help teens with autism learn social skills through interactive games and activities.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Q: How can I get started?</button>
+            <div class="faq-answer">
+                <p>To get started, simply create an account and explore the different features of the app.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Q: What is this app about?</button>
+            <div class="faq-answer">
+                <p>This app is designed to help teens with autism learn social skills through interactive games and activities.</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Chat Button -->
+    <button id="chat-button">
+        <img src="img/chat.png" alt="Chat" />
+    </button>
+    <!-- Chat Form (hidden initially) -->
+    <div id="chat-form" style="display: none;">
+        <button id="close-chat" style="float: right;">X</button>
+        <textarea id="chat-message" placeholder="Type your question here..."></textarea>
+        <button onclick="submitQuestion()">Submit</button>
+    </div>
+
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    });
+
+
+    document.getElementById('chat-button').onclick = function() {
+  document.getElementById('chat-form').style.display = 'block';
+};
+
+document.getElementById('close-chat').onclick = function() {
+  document.getElementById('chat-form').style.display = 'none';
+};
+
+function submitQuestion() {
+  var message = document.getElementById('chat-message').value;
+  alert("Question Submitted: ");
+  alert("Question Submitted: " + message);
+  // Here, add code to handle the submitted question, such as sending it to a server.
+  document.getElementById('chat-form').style.display = 'none'; // Hide the form after submission.
+  document.getElementById('chat-message').value = ''; // Clear the textarea.
+}
+
+
+    </script>
 </body>
 </html>
