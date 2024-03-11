@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url('images/background.jpeg');
+  background: url('images/background.jpeg');
   background-size: cover; /* Cover the entire page */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Do not repeat the image */
