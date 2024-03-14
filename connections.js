@@ -834,10 +834,24 @@ closeInstructionsSpan.onclick = function () {
   instructionsModal.style.display = "none";
 }
 
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == instructionsModal) {
     instructionsModal.style.display = "none";
   }
 }
+
+// Get the modal
+var homeModal = document.getElementById("homeModal");
+
+// Get the button that opens the modal
+var homeBtn = document.getElementById("homeBtn");
+
+
+
+// Add an event listener to the "Home" button
+homeBtn.addEventListener("click", function () {
+  // Navigate to the index.html page
+  window.location.href = "index.html";
+});
+
