@@ -13,12 +13,26 @@
     <button id="dictionaryBtn" class="dictionary-btn">
       <img src="images/dict.png" alt="Dictionary" />
     </button>
+    <!-- Instructions Button -->
+    <button id="instructionsBtn" class="dictionary-btn">
+      <img src="images/help.png" alt="Instructions" />
+    </button>
   </div>
-  <!-- The Modal -->
+
+  <!-- Instructions Modal -->
+  <div id="instructionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeInstructions">&times;</span>
+      <iframe id="instructionsContent" style="width:100%; height:80vh;"></iframe>
+    </div>
+  </div>
+
+
+  <!-- Dictionary Modal -->
   <div id="dictionaryModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close" id="closeDictionary">&times;</span>
       <div id="dictionaryContent">
         <!-- Dictionary entries will be inserted here -->
       </div>

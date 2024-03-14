@@ -744,7 +744,7 @@ var modal = document.getElementById("dictionaryModal");
 var btn = document.getElementById("dictionaryBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var closeDictionarySpan = document.getElementById("closeDictionary");
 
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
@@ -752,8 +752,10 @@ btn.onclick = function () {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
+var dictionaryModal = document.getElementById("dictionaryModal");
+
+closeDictionarySpan.onclick = function () {
+  dictionaryModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -762,6 +764,7 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
+
 
 function fillDictionaryContent() {
   const dictionaryEntries = {
@@ -808,3 +811,33 @@ function fillDictionaryContent() {
 
 // Call this function when the dictionary button is clicked
 document.getElementById("dictionaryBtn").addEventListener("click", fillDictionaryContent);
+
+// Get the modal
+var instructionsModal = document.getElementById("instructionsModal");
+
+// Get the button that opens the modal
+var instructionsBtn = document.getElementById("instructionsBtn");
+
+// Get the <span> element that closes the modal
+var closeInstructionsSpan = document.getElementById("closeInstructions");
+
+// When the user clicks the button, open the modal and load the instructions.html content
+instructionsBtn.onclick = function () {
+  instructionsModal.style.display = "block";
+  document.getElementById("instructionsContent").src = "instructions.html";
+}
+
+// When the user clicks on <span> (x), close the modal
+var instructionsModal = document.getElementById("instructionsModal");
+
+closeInstructionsSpan.onclick = function () {
+  instructionsModal.style.display = "none";
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == instructionsModal) {
+    instructionsModal.style.display = "none";
+  }
+}
