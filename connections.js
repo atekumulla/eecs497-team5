@@ -824,7 +824,7 @@ var closeInstructionsSpan = document.getElementById("closeInstructions");
 // When the user clicks the button, open the modal and load the instructions.html content
 instructionsBtn.onclick = function () {
   instructionsModal.style.display = "block";
-  document.getElementById("instructionsContent").src = "instructions.html";
+  document.getElementById("instructionsContent").src = "instructions_popup.html";
 }
 
 // When the user clicks on <span> (x), close the modal
