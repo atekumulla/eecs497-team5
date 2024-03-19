@@ -303,9 +303,42 @@ svg {
 }
 
 .dictionary-btn {
+  position: relative;
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 90px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 18px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 60%;
+  transform: translateX(-50%);
+  /* Center the tooltip horizontally */
+}
+
+.dictionary-btn:hover .tooltip-text {
+  visibility: visible;
+}
+
+.instructionsBtn:hover .tooltip-text {
+  visibility: visible;
+}
+
+.homeBtn:hover .tooltip-text {
+  visibility: visible;
 }
 
 .modal {
