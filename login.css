@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     color: white; /* Set text color to white */
-    background: url('images/background-image.png'); /* Replace 'background-image.jpg' with your background image URL */
+    background: rgb(137, 207, 240); /* Replace 'background-image.jpg' with your background image URL */
     background-size: cover;
     background-position: center;
 }
