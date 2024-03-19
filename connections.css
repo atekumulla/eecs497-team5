@@ -1,5 +1,6 @@
 body {
-  background: url("images/background.png");
+  /* background: url("images/background.png"); */
+  background: rgb(137, 207, 240)
 }
 
 .fullgrid {

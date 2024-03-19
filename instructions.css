@@ -8,7 +8,8 @@ body {
     align-items: center;
     color: black;
     /* Set text color to white */
-    background: url('images/background.png');
+    /* background: url('images/background.png'); */
+    background: rgb(137, 207, 240);
     background-size: cover;
     background-position: center;
 }
