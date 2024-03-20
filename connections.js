@@ -442,38 +442,6 @@ function takelife() {
   pressed.splice(0, 4);
 }
 
-// function showAlert(message) {
-//   // Create popup container
-//   const popupContainer = document.createElement("div");
-//   popupContainer.classList.add("popup-container");
-
-//   // Create popup content
-//   const popup = document.createElement("div");
-//   popup.classList.add("popup");
-
-//   // Create close button
-//   const closeBtn = document.createElement("span");
-//   closeBtn.classList.add("close-btn");
-//   closeBtn.textContent = "Close";
-//   closeBtn.onclick = () => {
-//     popupContainer.remove();
-//   };
-
-//   // Create message element
-//   const alertMessage = document.createElement("p");
-//   alertMessage.textContent = message;
-
-//   // Append close button and message to popup
-//   popup.appendChild(alertMessage);
-//   popup.appendChild(closeBtn);
-
-
-//   // Append popup to container
-//   popupContainer.appendChild(popup);
-
-//   // Append container to body
-//   document.body.appendChild(popupContainer);
-// }
 function showAlert(message, alertType = 'default') {
   // Create popup container
   const popupContainer = document.createElement("div");
@@ -768,22 +736,22 @@ window.onclick = function (event) {
 
 function fillDictionaryContent() {
   const dictionaryEntries = {
-    "Acceptance": "definition here.",
-    "Reflection": "definition here.",
-    "Resilience": "definition here.",
-    "Growth Mindset": "definition here.",
-    "Fidget": "definition here.",
-    "Pacing": "definition here.",
-    "Rapid Speech": "definition here.",
-    "Avoiding Eye Contact": "definition here.",
-    "Think Before Posting": "definition here.",
-    "Respectful Compliments": "definition here.",
-    "Positive Engagement": "definition here.",
-    "Authenticity": "definition here.",
-    "Active Listening": "definition here.",
-    "Kind Words": "definition here.",
-    "Non-Judgemental": "definition here.",
-    "Validating Feelings": "definition here."
+    "Acceptance": "Recognizing and being okay with things not going as planned.",
+    "Reflection": "Thinking deeply about your own thoughts and actions.",
+    "Resilience": "Bouncing back and trying again when things get tough.",
+    "Growth Mindset": "Viewing challenges as a chance to grow and get better.",
+    "Fidget": "Moving around a lot with your hands or feet because you feel overwhelmed or uneasy.",
+    "Pacing": "Walking back and forth to help think and manage feelings of being overwhelmed or restlessness.",
+    "Rapid Speech": "Speaking at an unusually fast pace, often a reaction to feeling pressured or anxious.",
+    "Avoiding Eye Contact": "Not looking at people in the eyes to reduce feeling more overwhelmed, indicating discomfort or a desire to withdraw.",
+    "Think Before Posting": "Taking a moment to consider how what you share might make you and others feel, to ensure it's kind and respectful.",
+    "Respectful Compliments": "Sharing nice comments that make people feel good, being careful to respect their feelings and boundaries.",
+    "Positive Engagement": "Interacting in ways that make everyone feel included and valued, helping you connect with others without feeling overwhelmed.",
+    "Authenticity": "Being true to yourself in what you share, showing your real thoughts and feelings in a way that feels comfortable to you.",
+    "Active Listening": "Listening carefully and showing you understand.",
+    "Kind Words": "Saying nice things in a gentle way to make you and others feel comforted and valued.",
+    "Non-Judgemental": "Letting people be themselves without worry.",
+    "Validating Feelings": "Understanding and accepting feelings to make you feel supported."
   };
 
   const dictionaryContentEl = document.getElementById("dictionaryContent");
