@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Set text color to white */
+    background: rgb(137, 207, 240); /* Replace 'background-image.jpg' with your background image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.2); /* Adjusted background color */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    width: calc(48% - 5px);
+}
+
+.avatar-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.avatar-selection img {
+    width: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    background-color: white;
+    color: #333; /* Dark text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #eee; /* Lighten the background on hover */
+}
+
+.link {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style links */
+.link a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
