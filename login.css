@@ -65,19 +65,21 @@ button:hover {
     background-color: #eee; /* Lighten the background on hover */
 }
 
-.register-link, .password-link {
+.link {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Style links */
-.register-link a, .password-link a {
+.link a {
     color: white;
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: 14px;
 }
 
-.register-link a:hover, .password-link a:hover {
+.link a:hover {
     text-decoration: underline;
 }
 
