@@ -1,92 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Social Skills Learning App</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <style>
-        /* Additional styles specific to this page */
-        body {
-            background-color: rgb(137, 207, 240);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            /* Prevent the background image from repeating */
-            margin: 0;
-            /* Remove default margin */
-            padding: 0;
-            /* Remove default padding */
-            height: 100vh;
-            /* Set the body height to 100% of the viewport height */
-            position: relative;
-        }
-
-        .container {
-            max-width: 100%;
-            /* Adjust the container width to fit within the viewport */
-            margin: 100px auto;
-            padding: 20px;
-            text-align: center;
-            /* Center align the buttons */
-        }
-
-        .tabs {
-            display: flex;
-            justify-content: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .tabs a {
-            padding: 10px 20px;
-            background-color: #4d94ff;
-            /* Light gray background color */
-            color: #000;
-            /* Black text color */
-            text-decoration: none;
-            border: 2px solid #007bff;
-            /* Add a border to the buttons */
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-
-        .tabs a:hover {
-            background-color: #0056b3;
-        }
-
-        .btn-large {
-            display: inline-block;
-            width: 30%;
-            /* Set the width of each button to a percentage of the container width */
-            max-width: 400px;
-            /* Set a maximum width for the buttons */
-            height: 200px;
-            background-color: #4d94ff;
-            color: #000;
-            text-align: center;
-            text-decoration: none;
-            border: 2px solid #007bff;
-            border-radius: 10px;
-            margin: 10px;
-            /* Adjust the margin for spacing between buttons */
-            cursor: pointer;
-            line-height: 200px;
-            font-size: 24px;
-        }
-
-        /* Positioning for sign-out button */
-        .sign-out {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-
     <div id="home-page" class="page">
         <!-- Navigation Tabs -->
         <div class="tabs">
@@ -95,17 +15,34 @@
             <p class="sign-out"><a href="login.html">Sign Out</a></p>
         </div>
 
-        <div class="container">
+        <div class="title">
             <!-- Welcome Message -->
             <h1>Welcome to CONNECTing To Me!</h1>
+        </div>
 
-            <!-- Buttons for Games -->
-            <a href="instructions.html" class="btn-large">Connections</a>
-            <a href="index.html" class="btn-large">Game 2</a>
-            <a href="index.html" class="btn-large">Game 3</a>
+        <div class="container">
+            <!-- Game Cards -->
+            <a href="instructions.html" class="game-card">
+                <div class="game-image" style="background: url('images/mini-progress-0.svg') center/contain no-repeat;"></div>
+                <h2 class="game-name">Connections</h2>
+                <p class="game-date">Sunday, Mar. 25, 2024</p>
+                <div class="play-banner">Play</div>
+            </a>
+
+            <a href="index.html" class="game-card">
+                <div class="game-image" style="background: url('images/spelling-bee-card-icon.svg') center/contain no-repeat;"></div>
+                <h2 class="game-name">Spelling Bee</h2>
+                <p class="game-date">Sunday, Mar. 25, 2024</p>
+                <div class="play-banner">Play</div>
+            </a>
+
+            <a href="index.html" class="game-card">
+                <div class="game-image" style="background: url('images/puzzle-unavailable.svg') center/contain no-repeat;"></div>
+                <h2 class="game-name">Set</h2>
+                <p class="game-date">Sunday, Mar. 25, 2024</p>
+                <div class="play-banner">Play</div>
+            </a>
         </div>
     </div>
-
 </body>
-
 </html>

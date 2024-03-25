@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "nyt-karnakcondensed";
+    src: url("fonts/karnakcondensed-normal-700.woff2") format("woff2"),
+        url("fonts/karnakcondensed-normal-700.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    }
+
+    @font-face {
+        font-family: "nyt-franklin";
+        src: url("fonts/franklin-normal-700.woff2") format("woff2"),
+            url("fonts/franklin-normal-700.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .game {
+        flex: 0 0 auto; /* Allow the cards to grow and shrink */
+        width: calc(33.33% - 24px); /* Adjust the width to cover one-third of the screen with spacing */
+        margin: 12px auto; /* Add spacing between the cards and center them horizontally */
+        padding: 40px; /* Increase padding for larger size */
+        background-color: #f0f0f0; /* Add background color */
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+        cursor: pointer; /* Add cursor pointer on hover */
+        position: relative; /* Add position relative for absolute positioning of the play banner */
+    }
+
+    .game:hover {
+        transform: translateY(-5px); /* Move the card up slightly on hover */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
+    }
+
+    .game img {
+        max-width: 100%; /* Ensure images don't overflow */
+    }
+
+    .game .play-banner {
+        position: absolute; /* Position the play banner absolutely */
+        top: 50%; /* Align the banner vertically */
+        left: 50%; /* Align the banner horizontally */
+        transform: translate(-50%, -50%); /* Center the banner */
+        background-color: rgba(255, 255, 255, 0.8); /* Add background color with opacity */
+        padding: 10px 20px; /* Add padding */
+        border-radius: 5px; /* Add border radius */
+        display: none; /* Initially hide the banner */
+        font-family: "nyt-franklin"; /* Use NYT Franklin font */
+        font-weight: 700; /* Use bold font weight */
+        font-size: 18px; /* Set font size */
+    }
+
+    .game:hover .play-banner {
+        display: block; /* Display the banner on hover */
+    }
+
+
+    /* Styles specific to game cards */
+    .game-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        width: 300px;
+        height: 290px;
+        padding: 52px 4px 43px;
+        border-radius: 7px;
+        box-shadow: 0 7px 0 0 #2860d8;
+        margin: 15px;
+        text-align: center;
+        position: relative;
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Use the default text color */
+    }
+
+    .game-card:hover {
+        background-color: #fafafa;
+    }
+
+    .game-image {
+        width: 80px;
+        height: 77px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+    }
+
+    .game-name {
+        font-size: 2.1875rem;
+        line-height: 2.84375rem;
+        font-family: "nyt-karnakcondensed";
+        margin-bottom: 10px;
+    }
+
+    .game-date {
+        color: #959595;
+        font-size: 15px;
+        line-height: 19px;
+        margin-bottom: 10px;
+        font-family: "nyt-franklin";
+    }
+
+    .play-banner {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "nyt-franklin";
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        min-width: 135%;
+        padding: 0 10px;
+        font-size: 0.75rem;
+        line-height: 0.975rem;
+        background-color: #2860d8;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    .game-card:hover .play-banner {
+        display: block;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        background-color: #4d88f9;
+    }
+
+    /* styling for header welcome message */
+    .title h1 { 
+        font-size: 2.625rem;
+        line-height: 3.4125rem;
+        font-family: "nyt-karnakcondensed", Georgia;
+        font-weight: 700;
+        margin-right: 16px;
+        margin-bottom: 10px;
+    }
+
+    /* styling for tabs */
+    .tabs {
+        display: flex;
+        justify-content: flex-end; /* Align tabs to the right */
+        padding: 12px 0; /* Adjust padding as needed */
+    }
+
+    .tabs a {
+        text-decoration: none;
+        color: #333; /* Adjust color as needed */
+        margin-left: 20px; /* Adjust spacing between tabs */
+        padding: 10px 20px; /* Add padding to create rectangular shape */
+        border-radius: 5px; /* Add border radius for rounded corners */
+        background-color: #f0f0f0; /* Add background color */
+        transition: background-color 0.3s ease; /* Add transition effect */
+        font-family: "nyt-franklin", Arial, sans-serif; /* Use the desired font */
+    }
+
+    .tabs a:hover {
+        background-color: #ddd; /* Change background color on hover */
+    }
+
+    .sign-out {
+        margin-left: auto; /* Push Sign Out link to the right */
+    }
+
+    .sign-out a {
+        text-decoration: none;
+        color: #333; /* Adjust color as needed */
+        padding: 10px 20px; /* Add padding to create rectangular shape */
+        border-radius: 5px; /* Add border radius for rounded corners */
+        background-color: #f0f0f0; /* Add background color */
+        transition: background-color 0.3s ease; /* Add transition effect */
+        font-family: "nyt-franklin", Arial, sans-serif; /* Use the desired font */
+    }
+
+    .sign-out a:hover {
+        background-color: #ddd; /* Change background color on hover */
+    }
