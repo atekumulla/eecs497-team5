@@ -8,7 +8,7 @@
 .back-to-home {
   position: fixed;
   top: 25px; /* Adjust as needed */
-  right: 50px; /* Adjust as needed */
+  left: 50px; /* Adjust as needed */
   padding: 10px;
   background-color: #007bff; /* Example color */
   color: white; /* Text color */
