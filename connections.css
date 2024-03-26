@@ -1,6 +1,6 @@
 body {
   /* background: url("images/background.png"); */
-  background: rgb(137, 207, 240)
+  background: rgb(137, 207, 240);
 }
 
 .fullgrid {
@@ -122,7 +122,8 @@ svg {
   }
 
   99% {
-    transform: translateY(calc(80px * var(--y))) translateX(calc(140px * var(--x)));
+    transform: translateY(calc(80px * var(--y)))
+      translateX(calc(140px * var(--x)));
   }
 
   100% {
@@ -384,4 +385,26 @@ svg {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+/* Define popup styles */
+#congratsPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 9999;
+  display: none; /* Initially hidden */
 }

@@ -208,11 +208,15 @@ function checkwin() {
   if (won == false && checkIfPlayed(pressed) === false) {
     takelife();
   } else {
-    console.log("already played");
   }
 }
-
-//react to a win
+function triggerConfettiAndPopup() {
+  // Show the popup after a delay
+  setTimeout(() => {
+    const popup = document.getElementById("congratsPopup");
+    popup.style.display = "block";
+  }, 3000); // Adjust delay (in milliseconds) as needed
+}
 
 let wintimes = 0;
 function winning(array, number) {
@@ -235,6 +239,7 @@ function winning(array, number) {
     // Step 3: Check if you've won
     if (wintimes == 4) {
       console.log("you won");
+      triggerConfettiAndPopup();
     }
 
     // Step 4: Delay before switch and change color
@@ -406,24 +411,35 @@ function solverest() {
 }
 //add lives
 let lives = 4;
-
+let count = 0;
 function takelife() {
+  let words = [
+    'Wrong combination. "Positive Engagement" is wrong. Think about what it means to learn from your mistakes.',
+    'Wrong combination. "Validating Feelings" is wrong. Think about what it means to learn from your mistakes.',
+    'Wrong combination. "Avoiding Eye Contact" is wrong. Think about what to do to understand how someone is feeling.',
+  ];
   if (lives == 4) {
     const element = document.getElementById("life4");
     // showAlert("Wrong combination. Guess again");
-    showAlert("Wrong combination. Guess again", 'warning');
+    //showAlert("Wrong combination. Guess again", 'warning');
+    showAlert(words[count], "warning");
+    count++;
     element.remove();
     lives--;
   } else if (lives == 3) {
     const element = document.getElementById("life3");
     // showAlert("Wrong combination. Guess again");
-    showAlert("Wrong combination. Guess again", 'warning');
+    //showAlert("Wrong combination. Guess again", 'warning');
+    showAlert(words[count], "warning");
+    count++;
     element.remove();
     lives--;
   } else if (lives == 2) {
     const element = document.getElementById("life2");
     // showAlert("Wrong combination. Guess again");
-    showAlert("Wrong combination. Guess again", 'warning');
+    //showAlert("Wrong combination. Guess again", 'warning');
+    showAlert(words[count], "warning");
+    count++;
     element.remove();
     lives--;
   } else if (lives == 1) {
@@ -432,7 +448,7 @@ function takelife() {
     lives--;
     setTimeout(() => {
       // showAlert("Sorry, you lost. Better luck next time!");
-      showAlert("Sorry, you lost. Better luck next time!", 'gameOver');
+      showAlert("Sorry, you lost. Better luck next time!", "gameOver");
       solverest();
     }, 1000); // 2000 milliseconds = 2 seconds
   }
@@ -442,7 +458,38 @@ function takelife() {
   pressed.splice(0, 4);
 }
 
-function showAlert(message, alertType = 'default') {
+// function showAlert(message) {
+//   // Create popup container
+//   const popupContainer = document.createElement("div");
+//   popupContainer.classList.add("popup-container");
+
+//   // Create popup content
+//   const popup = document.createElement("div");
+//   popup.classList.add("popup");
+
+//   // Create close button
+//   const closeBtn = document.createElement("span");
+//   closeBtn.classList.add("close-btn");
+//   closeBtn.textContent = "Close";
+//   closeBtn.onclick = () => {
+//     popupContainer.remove();
+//   };
+
+//   // Create message element
+//   const alertMessage = document.createElement("p");
+//   alertMessage.textContent = message;
+
+//   // Append close button and message to popup
+//   popup.appendChild(alertMessage);
+//   popup.appendChild(closeBtn);
+
+//   // Append popup to container
+//   popupContainer.appendChild(popup);
+
+//   // Append container to body
+//   document.body.appendChild(popupContainer);
+// }
+function showAlert(message, alertType = "default") {
   // Create popup container
   const popupContainer = document.createElement("div");
   popupContainer.classList.add("popup-container");
@@ -452,9 +499,9 @@ function showAlert(message, alertType = 'default') {
   popup.classList.add("popup");
 
   // Differentiate between alert types
-  if (alertType === 'gameOver') {
+  if (alertType === "gameOver") {
     popup.classList.add("game-over-popup");
-  } else if (alertType === 'warning') {
+  } else if (alertType === "warning") {
     popup.classList.add("warning-popup");
   }
   // ... You can add more conditions for different types
@@ -714,56 +761,55 @@ var btn = document.getElementById("dictionaryBtn");
 // Get the <span> element that closes the modal
 var closeDictionarySpan = document.getElementById("closeDictionary");
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 var dictionaryModal = document.getElementById("dictionaryModal");
 
 closeDictionarySpan.onclick = function () {
   dictionaryModal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
-
+};
 
 function fillDictionaryContent() {
   const dictionaryEntries = {
-    "Acceptance": "Recognizing and being okay with things not going as planned.",
-    "Reflection": "Thinking deeply about your own thoughts and actions.",
-    "Resilience": "Bouncing back and trying again when things get tough.",
-    "Growth Mindset": "Viewing challenges as a chance to grow and get better.",
-    "Fidget": "Moving around a lot with your hands or feet because you feel overwhelmed or uneasy.",
-    "Pacing": "Walking back and forth to help think and manage feelings of being overwhelmed or restlessness.",
-    "Rapid Speech": "Speaking at an unusually fast pace, often a reaction to feeling pressured or anxious.",
-    "Avoiding Eye Contact": "Not looking at people in the eyes to reduce feeling more overwhelmed, indicating discomfort or a desire to withdraw.",
-    "Think Before Posting": "Taking a moment to consider how what you share might make you and others feel, to ensure it's kind and respectful.",
-    "Respectful Compliments": "Sharing nice comments that make people feel good, being careful to respect their feelings and boundaries.",
-    "Positive Engagement": "Interacting in ways that make everyone feel included and valued, helping you connect with others without feeling overwhelmed.",
-    "Authenticity": "Being true to yourself in what you share, showing your real thoughts and feelings in a way that feels comfortable to you.",
-    "Active Listening": "Listening carefully and showing you understand.",
-    "Kind Words": "Saying nice things in a gentle way to make you and others feel comforted and valued.",
-    "Non-Judgemental": "Letting people be themselves without worry.",
-    "Validating Feelings": "Understanding and accepting feelings to make you feel supported."
+    Acceptance: "definition here.",
+    Reflection: "definition here.",
+    Resilience: "definition here.",
+    "Growth Mindset": "definition here.",
+    Fidget: "definition here.",
+    Pacing: "definition here.",
+    "Rapid Speech": "definition here.",
+    "Avoiding Eye Contact": "definition here.",
+    "Think Before Posting": "definition here.",
+    "Respectful Compliments": "definition here.",
+    "Positive Engagement": "definition here.",
+    Authenticity: "definition here.",
+    "Active Listening": "definition here.",
+    "Kind Words": "definition here.",
+    "Non-Judgemental": "definition here.",
+    "Validating Feelings": "definition here.",
   };
 
   const dictionaryContentEl = document.getElementById("dictionaryContent");
-  dictionaryContentEl.innerHTML = ''; // Clear any existing content
+  dictionaryContentEl.innerHTML = ""; // Clear any existing content
 
   for (const term in dictionaryEntries) {
     // Create the term element (could be a <p>, <div>, <dt>, etc.)
-    const termEl = document.createElement('p');
+    const termEl = document.createElement("p");
 
     // Create a <strong> element to bold the term
-    const strong = document.createElement('strong');
-    strong.textContent = term + ': ';
+    const strong = document.createElement("strong");
+    strong.textContent = term + ": ";
 
     // Create text node for the definition
     const definition = document.createTextNode(dictionaryEntries[term]);
@@ -778,7 +824,9 @@ function fillDictionaryContent() {
 }
 
 // Call this function when the dictionary button is clicked
-document.getElementById("dictionaryBtn").addEventListener("click", fillDictionaryContent);
+document
+  .getElementById("dictionaryBtn")
+  .addEventListener("click", fillDictionaryContent);
 
 // Get the modal
 var instructionsModal = document.getElementById("instructionsModal");
@@ -792,22 +840,23 @@ var closeInstructionsSpan = document.getElementById("closeInstructions");
 // When the user clicks the button, open the modal and load the instructions.html content
 instructionsBtn.onclick = function () {
   instructionsModal.style.display = "block";
-  document.getElementById("instructionsContent").src = "instructions_popup.html";
-}
+  document.getElementById("instructionsContent").src =
+    "instructions_popup.html";
+};
 
 // When the user clicks on <span> (x), close the modal
 var instructionsModal = document.getElementById("instructionsModal");
 
 closeInstructionsSpan.onclick = function () {
   instructionsModal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == instructionsModal) {
     instructionsModal.style.display = "none";
   }
-}
+};
 
 // Get the modal
 var homeModal = document.getElementById("homeModal");
@@ -815,11 +864,8 @@ var homeModal = document.getElementById("homeModal");
 // Get the button that opens the modal
 var homeBtn = document.getElementById("homeBtn");
 
-
-
 // Add an event listener to the "Home" button
 homeBtn.addEventListener("click", function () {
   // Navigate to the index.html page
   window.location.href = "index.html";
 });
-
